@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Story Book</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="start">Start</string>
+    <string name="onbText">Read books of different categories in our application and develop your horizons</string>
+    <string name="favourites">Favourites</string>
+    <string name="book_title">Book Title</string>
+    <string name="description">description</string>
+    <string name="sample">Sample...</string>
+</resources>
