@@ -88,7 +88,7 @@
             android:id="@+id/backBtn"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/Back"
+            android:background="@drawable/back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -96,7 +96,7 @@
             android:id="@+id/addToFavBtn"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/Save"
+            android:background="@drawable/save_blank"
             app:layout_constraintEnd_toStartOf="@+id/optionsBtn"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +104,7 @@
             android:id="@+id/optionsBtn"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="@drawable/Option"
+            android:background="@drawable/option"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
