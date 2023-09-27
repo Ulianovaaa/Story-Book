@@ -2,6 +2,7 @@ package com.izzzya.storybookapp
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import com.izzzya.storybookapp.adapter.Book
 import java.time.LocalDate
 
@@ -15,9 +16,26 @@ class SharedPrefs(context: Context) {
         private var sharedPref: SharedPreferences? = null
         const val PREFERENCES = "prefs"
         private const val ONB_COMPLETE: Boolean = false
-        private const val WEEK: Int = 0
-        var date: LocalDate = LocalDate.now()
         var book: Book? = null
+        //избранное
+        private val ITEM_LIST: Set<String> = hashSetOf()
+        private var newItemSet: MutableSet<String> = ITEM_LIST.toMutableSet()
+        fun setNewItemToSet(newItem: String) {
+            newItemSet.add(newItem)
+            val editor = sharedPref?.edit()
+            editor?.putStringSet("ITEM_LIST", newItemSet)
+            editor?.apply()
+        }
+        fun removeItemFromSet(newItem: String) {
+            newItemSet.remove(newItem)
+            val editor = sharedPref?.edit()
+            editor?.putStringSet("ITEM_LIST", newItemSet)
+            editor?.apply()
+        }
+        fun getItemSet(): MutableSet<String>?{
+            return sharedPref?.getStringSet("ITEM_LIST", ITEM_LIST)
+        }
+
 
         fun setOnb(t: Boolean){
             sharedPref?.edit()
@@ -29,15 +47,6 @@ class SharedPrefs(context: Context) {
             return sharedPref?.getBoolean("ONB_COMPLETE",false)
 
         }
-        fun setWeek(t: Int){
-            sharedPref?.edit()
-                ?.putInt("WEEK", t)
-                ?.apply()
-        }
 
-        fun getWeek(): Int? {
-            return sharedPref?.getInt("WEEK", 0)
-
-        }
     }
 }

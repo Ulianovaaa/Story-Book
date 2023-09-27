@@ -1,6 +1,7 @@
 package com.izzzya.storybookapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -40,12 +41,29 @@ class BookDetailsFragment : Fragment() {
         view.findViewById<TextView>(R.id.bookTitleTV).text = source.title
         view.findViewById<TextView>(R.id.bookDescTV).text = source.description
 
+        val favBtn = view.findViewById<ImageButton>(R.id.addToFavBtn)
+        favBtn.background = when(SharedPrefs.getItemSet()!!.contains(source.title)){
+            true -> resources.getDrawable(R.drawable.save)
+            else ->resources.getDrawable(R.drawable.save_blank)
+        }
+
         view.findViewById<ImageButton>(R.id.backBtn).setOnClickListener {
             findNavController().popBackStack()
         }
-        view.findViewById<ImageButton>(R.id.addToFavBtn).setOnClickListener {
-            Toast.makeText(requireContext(), "V razrabotke!", Toast.LENGTH_SHORT).show()
+//        Log.i("favs: ", SharedPrefs.getItemSet()!!.toString())
+        favBtn.setOnClickListener {
+         if (SharedPrefs.getItemSet()!!.contains(source.title)){
+             SharedPrefs.removeItemFromSet(source.title)
+//             Log.i("favs: ", SharedPrefs.getItemSet()!!.toString())
+             favBtn.background =resources.getDrawable(R.drawable.save_blank)
+         }else{
+             SharedPrefs.setNewItemToSet(source.title)
+//             Log.i("favs: ", SharedPrefs.getItemSet()!!.toString())
+             favBtn.background =resources.getDrawable(R.drawable.save)
+         }
         }
+
+
         view.findViewById<ImageButton>(R.id.optionsBtn).setOnClickListener {
             Toast.makeText(requireContext(), "V razrabotke!", Toast.LENGTH_SHORT).show()
         }

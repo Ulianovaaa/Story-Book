@@ -3,6 +3,7 @@ package com.izzzya.storybookapp.adapter
 import com.izzzya.storybookapp.R
 
 data class Book(
+    val id: Int,
     val title: String,
     val author: String,
     val description: String,
@@ -16,6 +17,7 @@ class DataSource {
     companion object{
         val booksList = listOf<Book>(
             Book(
+                0,
                 "How I Found Livingstone",
                 "Sir Henry M. Stanley",
                 "Riveting firsthand account of the long and arduous search by journalist/adventurer for one of the great explorers of the 19th century.",
