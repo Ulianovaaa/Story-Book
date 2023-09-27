@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Libro de cuentos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
+    <string name="start">Comenzar</string>
+    <string name="onbText">Lea libros de diferentes categorías en nuestra aplicación y desarrolle sus horizontes.</string>
+    <string name="favourites">Favoritos</string>
+    <string name="book_title">Titulo del libro</string>
+    <string name="description">descripción</string>
+    <string name="sample">Muestra…</string>
+    <string name="popular">Popular</string>
+    <string name="recommended">Recomendado</string>
+    <string name="team_s_choice">Elección del equipo</string>
+    <string name="all">Todo</string>
+    <string name="settings">Ajustes</string>
+    <string name="cappucino">Capuchino</string>
+    <string name="snowy_day">Día nevado</string>
+    <string name="select_theme">Seleccione el tema:</string>
+    <string name="pitch">Paso</string>
+</resources>

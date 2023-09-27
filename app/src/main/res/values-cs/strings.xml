@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Kniha příběhů</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ahoj prázdný fragment</string>
+    <string name="start">Start</string>
+    <string name="onbText">Přečtěte si knihy různých kategorií v naší aplikaci a rozvíjejte své obzory</string>
+    <string name="favourites">Oblíbené</string>
+    <string name="book_title">Název knihy</string>
+    <string name="description">popis</string>
+    <string name="sample">Vzorek…</string>
+    <string name="popular">Oblíbený</string>
+    <string name="recommended">Doporučeno</string>
+    <string name="team_s_choice">Týmová volba</string>
+    <string name="all">Všechno</string>
+    <string name="settings">Nastavení</string>
+    <string name="cappucino">Cappuccino</string>
+    <string name="snowy_day">Sněžný den</string>
+    <string name="select_theme">Vyberte téma:</string>
+    <string name="pitch">Rozteč</string>
+</resources>

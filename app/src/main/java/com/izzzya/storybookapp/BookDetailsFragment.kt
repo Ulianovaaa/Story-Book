@@ -1,14 +1,18 @@
 package com.izzzya.storybookapp
 
+import android.app.Dialog
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
@@ -65,7 +69,7 @@ class BookDetailsFragment : Fragment() {
 
 
         view.findViewById<ImageButton>(R.id.optionsBtn).setOnClickListener {
-            Toast.makeText(requireContext(), "V razrabotke!", Toast.LENGTH_SHORT).show()
+            showDialog()
         }
 
         view.findViewById<Button>(R.id.readBookBtn).setOnClickListener {
@@ -80,7 +84,42 @@ class BookDetailsFragment : Fragment() {
         rv.adapter = TagAdapter(context, source.tags)
 
     }
+    private fun showDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(true)
+        val sheet = LayoutInflater.from(requireContext()).inflate(R.layout.settings_dialog, null)
+        dialog.setContentView(sheet)
 
+        val themeGroup = sheet.findViewById<RadioGroup>(R.id.themeSelector)
+
+        when(SharedPrefs.getTheme()){
+            R.style.Theme_StoryBook_SnowyDay -> sheet.findViewById<RadioButton>(R.id.snowyThemeRadio).isChecked = true
+            R.style.Theme_StoryBook_Cappucino -> sheet.findViewById<RadioButton>(R.id.capuccinoRadio).isChecked = true
+        }
+
+        themeGroup.setOnCheckedChangeListener(object : RadioGroup.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
+                when(p1){
+                    R.id.snowyThemeRadio -> {
+                        requireActivity().setTheme(R.style.Theme_StoryBook_SnowyDay)
+                        SharedPrefs.setTheme(R.style.Theme_StoryBook_SnowyDay)
+                    }
+                    R.id.capuccinoRadio -> {
+                        requireActivity().setTheme(R.style.Theme_StoryBook_Cappucino)
+                        SharedPrefs.setTheme(R.style.Theme_StoryBook_Cappucino)
+                    }
+//                    R.id.pitchRadio -> {
+//                        requireActivity().setTheme(R.style.Theme_StoryBook_Pitch)
+//                        SharedPrefs.setTheme(R.style.Theme_StoryBook_Pitch)
+//                    }
+                }
+            }
+
+        })
+
+        dialog.show()
+    }
     companion object {
 
     }

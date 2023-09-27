@@ -7,7 +7,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -15,16 +15,54 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/themesRV"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginVertical="16dp" />
+                android:layout_height="match_parent" >
+
+                <RadioGroup
+                    android:id="@+id/themesRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/allBooksradBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/all" />
+
+                    <RadioButton
+                        android:layout_marginHorizontal="8dp"
+                        android:id="@+id/popularRadBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/popular" />
+
+                    <RadioButton
+                        android:layout_marginHorizontal="8dp"
+                        android:id="@+id/recommendedRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/recommended" />
+
+                    <RadioButton
+                        android:id="@+id/choiceRadBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/team_s_choice" />
+
+                </RadioGroup>
+            </HorizontalScrollView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/booksRV"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="420dp"
                 android:layout_marginVertical="16dp" />
 
             <TextView
@@ -39,6 +77,7 @@
                 android:id="@+id/favsRV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </LinearLayout>
     </ScrollView>
 

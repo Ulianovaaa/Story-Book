@@ -16,10 +16,22 @@ class SharedPrefs(context: Context) {
         private var sharedPref: SharedPreferences? = null
         const val PREFERENCES = "prefs"
         private const val ONB_COMPLETE: Boolean = false
+        private const val THEME: Int = 0
+        private const val TEXT_SIZE: Int = 1
         var book: Book? = null
         //избранное
         private val ITEM_LIST: Set<String> = hashSetOf()
         private var newItemSet: MutableSet<String> = ITEM_LIST.toMutableSet()
+
+        fun getTheme(): Int?{
+            return sharedPref?.getInt("THEME", (R.style.Theme_StoryBook_SnowyDay))
+        }
+        fun setTheme(t: Int){
+            val editor = sharedPref?.edit()
+            editor?.putInt("THEME", t)
+            editor?.apply()
+        }
+
         fun setNewItemToSet(newItem: String) {
             newItemSet.add(newItem)
             val editor = sharedPref?.edit()

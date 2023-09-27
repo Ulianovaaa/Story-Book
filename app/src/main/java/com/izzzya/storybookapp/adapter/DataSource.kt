@@ -3,7 +3,6 @@ package com.izzzya.storybookapp.adapter
 import com.izzzya.storybookapp.R
 
 data class Book(
-    val id: Int,
     val title: String,
     val author: String,
     val description: String,
@@ -17,7 +16,6 @@ class DataSource {
     companion object{
         val booksList = listOf<Book>(
             Book(
-                0,
                 "How I Found Livingstone",
                 "Sir Henry M. Stanley",
                 "Riveting firsthand account of the long and arduous search by journalist/adventurer for one of the great explorers of the 19th century.",
@@ -91,6 +89,78 @@ class DataSource {
                         "But it must be remembered that I am writing a narrative of my own adventures and travels, and that until I meet Livingstone, I presume the greatest interest is attached to myself, my marches, my troubles, my thoughts, and my impressions. Yet though I may sometimes write, \"my expedition,\" or \"my caravan,\" it by no means follows that I arrogate to myself this right. For it must be distinctly understood that it is the \"'New York Herald' Expedition,\" and that I am only charged with its command by Mr. James Gordon Bennett, the proprietor of the 'New York Herald,' as a salaried employ of that gentleman.\n" +
                         "\n" +
                         "One thing more; I have adopted the narrative form of relating the story of the search, on account of the greater interest it appears to possess over the diary form, and I think that in this manner I avoid the great fault of repetition for which some travellers have been severely criticised."
+            ),
+            Book(
+                "Чек пук паутина",
+                "izzzya_1917",
+                "ФЕТИШ ФАНФИК.....ГДЕ МИГЕЛЬ....ПОЕЛ ГОРОХ...",
+                R.drawable.spideman,
+                listOf("пауки"),
+                "Возвращается Мигель О'Хара с работы а там его встречает его жена Лего паук\n" +
+                        "- что у нас сегодня на ужин дорога?\n" +
+                        "- гороховый суп - донёсся тонкий голосок с пола\n" +
+                        "- м-м-м, мой любимый... - протянул Мигель закусывая губу, - а ты умеешь порадовать"+
+                        "\nОни сели вдвоем за стол, Лего паук зажёг чайные свечи спичкой, потому что это было самое романтичное, до чего доставал его рост\n" +
+                        "Мигель О'Хара облизнулся, глядя на таз горохового супа перед ним. \n" +
+                        "- приятного аппетита, - вновь произнёс Лего паук, беря в руки кошельковую ложечку..."
+                +"\nПосле плотного ужина обеда, по закону Архимеда, чтобы жиром не заплыть, надо срочно покурить полежать - подумал Лего паук, спрыгнул со своего детского стульчика с лесенкой с помощью Лего паутины, и попрыгал в сторону кровати супругов. \n" +
+                        "Лего паук залез в постель и сложил свои ножки в расслабленную и слегка эротичную позу настолько, насколько мог\n" +
+                        "Он был ещё одет, но точно не в глазах Мигеля..."
+                +"\nМигель, поглотив таз горохового супа словно черная дыра, так заботливо приготовленного его мужем, заметил это, и вслед пошел к кровати.\n" +
+                        "Он заметил, в каком положении духа и тела располагается Лего паук. Его намерения были ясны с самого начала. \n" +
+                        "Мигель потянулся над кроватью и резко упал на неё своей попой объёмом в кубический километр...\n" +
+                        "- Ой, - он обернулся, - милый, я не задел тебя?\n" +
+                        "В ответ ничего не поступило, лишь лёгкие вибрации пощекотали его ягодицу.\n" +
+                        "- Что ж, молчание — знак согласия, - тихо произнес своим низким голосом Мигель и подвигал бёдрами, устраиваясь удобнее."
+                +"\nЧерез пару мгновений Мигель почувствовал что-то знакомое в своём кишечнике. Он сразу же подумал, насколько неловко будет запускать газовую атаку, когда любовник лежит так близко, поэтому решил сделать всё тихо. \n" +
+                        "\n" +
+                        "Пук.... пук-пук...\n" +
+                        "\n" +
+                        "Мигель запустил шептуна."
+                +"\nПаук '99 был осторожен: прислушивался, не возникнет ли возражений от Лего. Но была тишина. \n" +
+                        "Тогда он решил пойти ва-банк. Выпустить всё, быстро и сразу. \n" +
+                        "\n" +
+                        "- ПУУУУУУУУУУУК\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\uD83D\uDCA8\n" +
+                        "\n" +
+                        "Пердёж резонировал по квартире, заставляя содрогаться пружины матраса и маленького Лего паука, ловящего собачий кайф от перекрытого жопой Мигеля ему воздуха."
+                +"\nЛего паук на какой-то момент почувствовал себя евреем. Но от оргазма ещё никто не умирал, даже находясь в газовой камере. \n" +
+                        "Суп удался поистине великолепным: его хватило на всю ночь. \n" +
+                        "Лишь пара белых Лего кубиков на ягодице Мигеля напоминали о том, что произошло между ними тем вечером..."
+            ),
+            Book(
+                "Interview with the Vampire (The Vampire Chronicles 1)",
+                "Anne Rice",
+                "This is the story of Louis, as told in his own words, of his journey through mortal and immortal life. Louis recounts how he became a vampire at the hands of the radiant and sinister Lestat and how he became indoctrinated, unwillingly, into the vampire way of life. His story ebbs and flows through the streets of New Orleans, defining crucial moments such as his discovery of the exquisite lost young child Claudia, wanting not to hurt but to comfort her with the last breaths of humanity he has inside. Yet, he makes Claudia a vampire, trapping her womanly passion, will, and intelligence inside the body of a small child. Louis and Claudia form a seemingly unbreakable alliance and even \"settle down\" for a while in the opulent French Quarter. Louis remembers Claudia's struggle to understand herself and the hatred they both have for Lestat that sends them halfway across the world to seek others of their kind. Louis and Claudia are desperate to find somewhere they belong, to find others who understand, and someone who knows what and why they are.\n" +
+                        "\n" +
+                        "Louis and Claudia travel Europe, eventually coming to Paris and the ragingly successful Theatre des Vampires--a theatre of vampires pretending to be mortals pretending to be vampires. Here they meet the magnetic and ethereal Armand, who brings them into a whole society of vampires. But Louis and Claudia find that finding others like themselves provides no easy answers and in fact presents dangers they scarcely imagined.\n" +
+                        "\n" +
+                        "Originally begun as a short story, the book took off as Anne wrote it, spinning the tragic and triumphant life experiences of a soul. As well as the struggles of its characters, Interview captures the political and social changes of two continents. The novel also introduces Lestat, Anne's most enduring character, a heady mixture of attraction and revulsion. The book, full of lush description, centers on the themes of immortality, change, loss, sexuality, and power.",
+                R.drawable.vamps,
+                listOf("Vampires", "Classics"),
+                "PART I\n" +
+                        "“I see…” said the vampire thoughtfully, and slowly he walked across the room towards the window. For a long time he stood there against the dim light from Divisadero Street and the passing beams of traffic. The boy could see the furnishings of the room more clearly now, the round oak table, the chairs. A wash basin hung on one wall with a mirror. He set his brief case on the table and waited.\n" +
+                        "“But how much tape do you have with you?” asked the vampire, turning now so the boy could see his profile. “Enough for the story of a life?”\n" +
+                        "“Sure, if it’s a good life. Sometimes I interview as many as three or four people a night if I’m lucky. But it has to be a good story. That’s only fair, isn’t it?”"+
+                "\n“Admirably fair,” the vampire answered. “I would like to tell you the story of my life, then. I would like to do that very much.”\n" +
+                        "“Great,” said the boy. And quickly he removed the small tape recorder from his brief case, making a check of the cassette and the batteries. “I’m really anxious to hear why you believe this, why you…”\n" +
+                        "“No,” said the vampire abruptly. “We can’t begin that way. Is your equipment ready?”\n" +
+                        "“Yes,” said the boy.\n" +
+                        "“Then sit down. I’m going to turn on the overhead light.”\n" +
+                        "“But I thought vampires didn’t like light,” said the boy. “If you think the dark adds to the atmosphere.”\n" +
+                        "But then he stopped. The vampire was watching him with his back to the window. The boy could make out nothing of his face now, and something about the still figure there distracted him. He started to say something again but he said nothing. And then he sighed with relief when the vampire moved towards the table and reached for the overhead cord.\n" +
+                        "At once the room was flooded with a harsh yellow light. And the boy, staring up at the vampire, could not repress a gasp. His fingers danced backwards on the table to grasp the edge. “Dear God!” he whispered, and then he gazed, speechless, at the vampire.\n" +
+                        "The vampire was utterly white and smooth, as if he were sculpted from bleached bone, and his face was as seemingly inanimate as a statue, except for two brilliant green eyes that looked down at the boy intently like flames in a skull. But then the vampire smiled almost wistfully, and the smooth white substance of his face moved with the infinitely flexible but minimal lines of a cartoon. “Do you see?” he asked softly.\n" +
+                        "The boy shuddered, lifting his hand as if to shield himself from a powerful light. His eyes moved slowly over the finely tailored black coat he’d only glimpsed in the bar, the long folds of the cape, the black silk tie knotted at the throat, and the gleam of the white collar that was as white as the vampire’s flesh. He stared at the vampire’s full black hair, the waves that were combed back over the tips of the ears, the curls that barely touched the edge of the white collar.\n" +
+                        "“Now, do you still want the interview?” the vampire asked.\n" +
+                        "The boy’s mouth was open before the sound came out. He was nodding. Then he said, “Yes.”\n" +
+                        "The vampire sat down slowly opposite him and, leaning forward, said gently, confidentially, “Don’t be afraid. Just start the tape.”\n" +
+                        "And then he reached out over the length of the table. The boy recoiled, sweat running down the sides of his face. The vampire clamped a hand on the boy’s shoulder and said, “Believe me, I won’t hurt you. I want this opportunity. It’s more important to me than you can realize now. I want you to begin.” And he withdrew his hand and sat collected, waiting.\n" +
+                        "It took a moment for the boy to wipe his forehead and his lips with a handkerchief, to stammer that the microphone was in the machine, to press the button, to say that the machine was on.\n" +
+                        "“You weren’t always a vampire, were you?” he began.\n" +
+                        "“No,” answered the vampire. “I was a twenty-five year-old man when I became a vampire, and the year was seventeen ninety-one.”\n" +
+                        "The boy was startled by the preciseness of the date and he repeated it before he asked, “How did it come about?”\n" +
+                        "“There’s a simple answer to that. I don’t believe I want to give simple answers,” said the vampire. “I think I want to tell the real story…”\n" +
+                        "“Yes,” the boy said quickly. He was folding his handkerchief over and over and wiping his lips now with it again."
             )
         )
     }
